@@ -9,8 +9,6 @@ import {AppContainer} from 'react-hot-loader';
 
 import App from './components/App'
 
-import injectTapEventPlugin from 'react-tap-event-plugin'
-
 function render(RootAppComponent) {
     ReactDOM.render(
         <AppContainer>
@@ -21,8 +19,6 @@ function render(RootAppComponent) {
 }
 
 function run() {
-    injectTapEventPlugin()
-
     render(App)
     if (module.hot) {
         module.hot.accept('./components/App', () => {
